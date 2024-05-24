@@ -1,10 +1,16 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, Button } from 'react-native'
 
-export default function Home(): JSX.Element {
+const Home = ({ navigation }: any): any => {
   return (
     <View>
-      <Text>Home</Text>
+      <Text>Home Screen</Text>
+      <Button
+        title="Go to Movie Detail"
+        onPress={() => navigation.navigate('MovieDetail')}
+      />
     </View>
   )
 }
+
+export default Home
